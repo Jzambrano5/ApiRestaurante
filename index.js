@@ -6,6 +6,7 @@ import rotuerTypeUsers from './router/TypeUsersRouter.js';
 import  { RouterUsuer } from './router/UserRouter.js';
 import { RouterBus } from './router/busRouter.js';
 import { sequelize } from "./db/conexion.js";
+import rotuerPerson from './router/PersonRouter.js';
 
 const _PORT = PORT || 3000;
 const app = express();
@@ -15,6 +16,7 @@ app.use(cors());
 app.use('/api', rotuerTypeUsers);
 app.use('/api', RouterUsuer);
 app.use('/api', RouterBus);
+app.use('/api', rotuerPerson);
 
 const main = async () => {
     try {
